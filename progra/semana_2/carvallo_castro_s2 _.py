@@ -95,17 +95,14 @@ def leer_entero(mensaje, minimo=None, maximo=None):
 
 
 def calcular_vuelto(monto_compra, monto_pagado):
-    """Retorna la diferencia entre el pago y el valor de la compra."""
     return monto_pagado - monto_compra
 
 
 def promedio_notas(notas):
-    """Retorna el promedio de las notas recibidas."""
     return sum(notas) / len(notas)
 
 
 def aplicar_descuento(precio, porcentaje_descuento):
-    """Retorna el monto descontado y el precio final."""
     monto_descuento = precio * porcentaje_descuento / 100
     precio_final = precio - monto_descuento
     return monto_descuento, precio_final
@@ -119,14 +116,12 @@ def convertir_minutos(total_minutos):
 
 
 def calcular_reparto(total_productos, cantidad_personas):
-    """Retorna el reparto por persona y el sobrante."""
     productos_por_persona = total_productos // cantidad_personas
     productos_sobrantes = total_productos % cantidad_personas
     return productos_por_persona, productos_sobrantes
 
 
 def formatear_moneda(valor):
-    """Retorna un monto con formato habitual en Chile."""
     formato = f"{valor:,.2f}"
     formato = (
         formato.replace(",", "PUNTO").replace(".", ",").replace("PUNTO", ".")
